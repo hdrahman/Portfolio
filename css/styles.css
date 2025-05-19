@@ -572,8 +572,101 @@ ul {
 }
 
 .skill-item:hover {
-    background: linear-gradient(270deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     transform: translateY(-3px);
+}
+
+/* Licenses & Certifications Section */
+.licenses {
+    background-color: var(--dark-bg);
+    /* Or a slightly different shade if preferred */
+}
+
+.licenses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive grid */
+    gap: 30px;
+}
+
+.license-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.license-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(44, 239, 255, 0.1);
+}
+
+.license-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.issuer-logo {
+    width: 50px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
+    object-fit: contain;
+    /* Or 'cover', depending on logo aspect ratio */
+    margin-right: 15px;
+    border-radius: 4px;
+    /* Optional: if logos look better with slightly rounded corners */
+}
+
+.license-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+    color: var(--primary-color);
+}
+
+.license-header .issuer {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.license-card .date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.license-card .credential-id {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    word-break: break-all;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    /* Pushes tags and button to the bottom if card heights vary */
+}
+
+.skills-tags span {
+    background-color: rgba(44, 239, 255, 0.1);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.license-card .btn-small {
+    margin-top: auto;
+    /* Ensures button aligns to bottom if content above varies */
+    align-self: flex-start;
+    /* Aligns button to the left */
 }
 
 /* Contact Section */
